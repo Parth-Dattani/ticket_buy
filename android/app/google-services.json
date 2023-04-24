@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533968207870",
+    "project_id": "tktby-c65ec",
+    "storage_bucket": "tktby-c65ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533968207870:android:a1619df5c52bc1cac4caaf",
+        "android_client_info": {
+          "package_name": "com.example.ticket_buy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533968207870-i3ct112u5cs4hbqk0ibd45ef75t81j6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-_ycbViqFZ-zGI6xqnnvJt7AeuhiDwu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533968207870-i3ct112u5cs4hbqk0ibd45ef75t81j6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

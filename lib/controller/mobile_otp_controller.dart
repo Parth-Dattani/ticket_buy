@@ -50,10 +50,8 @@ class MobileOtpController extends BaseController{
 
     await auth.signInWithCredential(credential).then(
           (value) {
-        //setState(() {
         user = FirebaseAuth.instance.currentUser;
         update();
-        //});
       },
     ).whenComplete(
           () {

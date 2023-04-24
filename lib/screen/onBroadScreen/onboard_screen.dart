@@ -23,7 +23,7 @@ class OnBoardScreen extends GetView<OnBoardController> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 80),
+                padding: const EdgeInsets.only(left:30, right: 30, top: 40, bottom: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -63,8 +63,9 @@ class OnBoardScreen extends GetView<OnBoardController> {
                                     ColorsConfig.colorPurple,
                                   ],
                                 ),
+                                const SizedBox(height: 12,),
                                 Text(controller.subTitle[index],
-                                //style: CustomTextStyle.subTitleStyle,
+                                style: CustomTextStyle.onBoardSubTitleStyle,
                                 )
                               ],
                             ),

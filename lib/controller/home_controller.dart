@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
 import '../model/model.dart';
@@ -20,7 +21,8 @@ class HomeController extends BaseController{
   ];
 
   Rx<HomeResponse> getData = HomeResponse().obs;
-  RxList<HomeResponse> resultDataList = <HomeResponse>[].obs;
+  RxList<Data> resultDataList = <Data>[].obs;
+  RxList<Allevent> resultAlleventList = <Allevent>[].obs;
   var tabIndex = 0.obs;
 
   @override
@@ -38,18 +40,20 @@ class HomeController extends BaseController{
   void getHomeList() async {
     loader.value = true;
     try {
-      var response = await RemoteServices.getHomeList("Rajkot", "Gujarat", "India");
+      var response = await RemoteServices.getHomeList("", "", "");
       if (response.statusCode == 200) {
         var jsonData = json.decode(response.body);
-        var data = jsonData['data'];
+        var data = jsonData['data']['allevent'];
         if (data.isNotEmpty) {
           for (var i in data) {
-            resultDataList.add(HomeResponse.fromJson(i));
+            resultAlleventList.add(Allevent.fromJson(i));
           }
-          debugPrint("List : ${resultDataList[0].data?.benner}");
+          debugPrint("List resultDataList : ${resultAlleventList.length}");
           loader.value = false;
-      // else if(response.statusCode == 401){
-      //   await Fluttertoast.showToast(msg: 'Session expire! Please, Login again.');
+      }
+         else if(response.statusCode == 401){
+          loader.value = false;
+           await Fluttertoast.showToast(msg: 'Session expire! Please, Login again.');
       }}
     } catch (e) {
       loader.value = false;

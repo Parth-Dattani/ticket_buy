@@ -41,7 +41,6 @@ class CustomTextStyle {
     fontSize: AppTextStyle.textFontSize18,
     fontWeight: FontWeight.w500,
     letterSpacing: AppTextStyle.letterSpacing,
-
   );
 
   static TextStyle viewStyle = const TextStyle(
@@ -91,5 +90,12 @@ class CustomTextStyle {
     fontFamily: AppTextStyle.urbanistRegular,
     fontSize: AppTextStyle.textFontSize18,
     fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle onBoardSubTitleStyle = const TextStyle(
+    color: ColorsConfig.colorDarkPurple,
+    fontFamily: AppTextStyle.urbanistMedium,
+    fontSize: AppTextStyle.textFontSize18,
+    fontWeight: FontWeight.w400,
   );
 }

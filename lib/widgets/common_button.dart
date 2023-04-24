@@ -51,7 +51,9 @@ class CommonButton extends StatelessWidget {
       ),
       child:
           Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment:
+        image == null ? MainAxisAlignment.center :
+            MainAxisAlignment.start,
         children: [
           image != null ? Image.asset(image!, height: height, width: width, scale: scale,) : Container(),
           image != null ?   const SizedBox(width: 10.0,) : const SizedBox(width: 0),

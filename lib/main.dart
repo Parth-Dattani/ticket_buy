@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ticket_buy/routs.dart';
-import 'package:ticket_buy/screen/HomeScreen/home_screen.dart';
+import 'package:ticket_buy/screen/onBroadScreen/onboard_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Ticket',
     debugShowCheckedModeBanner: false,
       getPages: appPage,
-      initialRoute: HomeScreen.pageId,
+      initialRoute: OnBoardScreen.pageId,
     );
   }
 }

@@ -7,6 +7,7 @@ import 'package:ticket_buy/utils/utils.dart';
 
 class LoginController extends BaseController{
 
+  final GlobalKey<FormState> loginForm = GlobalKey<FormState>();
   TextEditingController phoneController = TextEditingController();
   TextEditingController otpController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
